@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://docs.brew.sh/rubydoc/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class TimbuchingerAgentAlign < Formula
+class AgentAlign < Formula
   desc ""
   homepage "https://github.com/timbuchinger/agent-align"
   version "2.5.3"
