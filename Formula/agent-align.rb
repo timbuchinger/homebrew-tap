@@ -4,7 +4,7 @@
 class AgentAlign < Formula
   desc ""
   homepage "https://github.com/timbuchinger/agent-align"
-  version "2.5.3"
+  version "2.5.4"
 
   license ""
 
@@ -33,7 +33,8 @@ class AgentAlign < Formula
   def install
     # The release tarball already contains a single prebuilt executable.
     # Install that binary into Homebrew's `bin` and ship any metafiles.
-    bin.install "agent-align"
+    bin.install  "agent-align-darwin_#{Hardware::CPU.arm? ? "arm64" : "amd64"}" => "agent-align"
+
     prefix.install_metafiles
   end
 
