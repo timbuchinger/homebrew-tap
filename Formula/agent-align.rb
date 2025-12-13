@@ -11,14 +11,14 @@ class AgentAlign < Formula
   on_macos do
     on_arm do
       url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-arm64.tar.gz"
-      sha256 "sha256:20bfc1f3432ddc0d535218ac8b02c9d3d412f3db1bfa0aa5b30a22d19f346e50"
+      sha256 "sha256:1f9d76653cb0d74053d1af3164a984f9c78fc1747775399defcd318673d2dc21"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-amd64.tar.gz"
-      sha256 "947a20418c4948da9dde5423b862b6d7ab7281c8916474489a08dd4af6e3af42"
+      sha256 "sha256:1dae30eb3f46b04c88260129b13fbaa158bd990607fe04f140b28c5055271109"
     end
   end
 
