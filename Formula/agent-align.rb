@@ -1,47 +1,33 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
 class AgentAlign < Formula
   desc "Sync MCP configs across coding agents"
   homepage "https://github.com/timbuchinger/agent-align"
-  version "0.0.0"
+  version "2.5.5"
 
   license "MIT"
 
   on_macos do
-  on_arm do
-    url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-arm64.tar.gz"
-    sha256 "b5982637c589429252135b55c942865819b4ffdd77db27e9b2bf2d10d928882c"
-  end
-  on_intel do
-    url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-amd64.tar.gz"
-    sha256 "e25de7a440b25f1b3fc08f6261af22203ff6a8ae51791df4890dff7475ee14ea"
-  end
-end
-
+    on_arm do
+      url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-arm64.tar.gz"
+      sha256 "0589e6ee8d7b090cf7123eacc34270eef469456c2100943dcbad157e66be4838"
+    end
     on_intel do
       url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-amd64.tar.gz"
-      sha256 "<DARWIN_AMD_SHA>" # Placeholder for SHA256
+      sha256 "cac7896089cb0dece2fcd09fbac80dc767dae835de4439f7abb2a2064b260cf0"
     end
   end
 
   on_linux do
-  on_intel do
-    url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-amd64.tar.gz"
-    sha256 "bbeae031456260f95f0bff8ea889cf986c90b66670334e81b7a65259bffe130e"
-  end
-  on_arm do
-    url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-arm64.tar.gz"
-    sha256 "c3c76714f86c03a8781e543c915711d76c207ac40b0473f78ffc040d24e870da"
-  end
-end
-
+    on_intel do
+      url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-amd64.tar.gz"
+      sha256 "82c7db920aec0da467f577f28894ea0a4df1323e5403d3ca77cbcadc72c21ee4"
+    end
     on_arm do
       url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-arm64.tar.gz"
-      sha256 "<LINUX_ARM_SHA>" # Placeholder for SHA256
+      sha256 "0f3652be6fae2afdcd4116a832d687bf7df84f084d8bddce77cf6a11c9343ee9"
     end
   end
 
   def install
-    # Release tarballs contain a single prebuilt `agent-align` executable.
     bin.install "agent-align"
     prefix.install_metafiles
   end
