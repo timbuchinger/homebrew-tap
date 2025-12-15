@@ -1,0 +1,39 @@
+class AgentAlign < Formula
+  desc "Sync MCP configs across coding agents"
+  homepage "https://github.com/timbuchinger/agent-align"
+  version "<%= ver %>"
+
+  license "MIT"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-arm64.tar.gz"
+      sha256 "<%= darwin_arm_sha %>"
+    end
+    on_intel do
+      url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-amd64.tar.gz"
+      sha256 "<%= darwin_amd_sha %>"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-amd64.tar.gz"
+      sha256 "<%= linux_amd_sha %>"
+    end
+    on_arm do
+      url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-arm64.tar.gz"
+      sha256 "<%= linux_arm_sha %>"
+    end
+  end
+
+  def install
+    bin.install "agent-align"
+    prefix.install_metafiles
+  end
+
+  test do
+    assert_predicate bin/"agent-align", :exist?
+    assert_predicate bin/"agent-align", :executable?
+  end
+end
