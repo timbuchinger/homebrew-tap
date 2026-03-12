@@ -1,29 +1,29 @@
 class AgentAlign < Formula
   desc "Sync MCP configs across coding agents"
   homepage "https://github.com/timbuchinger/agent-align"
-  version "2.9.0"
+  version "2.9.1"
 
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-arm64.tar.gz"
-      sha256 "86893201f89240d5c075fafb27cb3b355c4edd59bb883aeb7b1d121968fd1dc0"
+      sha256 "80fcdbfd1122977e7f1edd4316d109c0f95ea6e02fdcd99c8697468ccb80d9fb"
     end
     on_intel do
       url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-darwin-amd64.tar.gz"
-      sha256 "a46348d0f430fce653ea614249f847989762bbcf3f72defe5a61153d6cf823d5"
+      sha256 "5c2ac3873188a79effe886a04d4ead906a064026c6772d51dc7033277cbb5ec0"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-amd64.tar.gz"
-      sha256 "3475130f749cb34bae857f854d45f59456727c16c1dff1d71352b4b5b1ca5f7f"
+      sha256 "3256dc65ec393ff9c155dd7702d99667bd9d3a199a13c43eb5fd5517a5c81d8a"
     end
     on_arm do
       url "https://github.com/timbuchinger/agent-align/releases/download/v#{version}/agent-align-linux-arm64.tar.gz"
-      sha256 "d95455b7ca6bcab71474b4ec82bbc5c088b1170161132e96436658924546a949"
+      sha256 "61a16a0502295ceafcf3df9d93e5a563d9a40b233c1ddc41b820778968d0d8a8"
     end
   end
 
